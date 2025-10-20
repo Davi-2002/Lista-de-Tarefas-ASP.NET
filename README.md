@@ -70,11 +70,10 @@ cd Lista-de-Tarefas-ASP.NET
 # 5️⃣ Restaure dependências e execute
 dotnet restore
 dotnet run
-```
 
 # 6️⃣ Acesse a aplicação no navegador
 https://localhost:xxxx/Tarefas
-
+```
 ---
 
 ## 💡 Detalhes Técnicos
