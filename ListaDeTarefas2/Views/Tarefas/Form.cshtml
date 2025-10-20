@@ -1,0 +1,28 @@
+﻿@model ListaDeTarefas2.Models.Tarefa;
+
+<div class="container" style="margin-top:6rem;">
+    <h1>@ViewData["Title"]</h1>
+    <form method="post">
+        <div class="mb-3">
+        <label asp-for="Titulo">Título</label>
+        <input asp-for="Titulo" class="form-control">
+        <div class="form-text text-muted">Digite no máximo 40 caracteres.</div>
+        <span asp-validation-for="Titulo" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+        <label asp-for="DataLimite">Data Limite</label>
+        <input asp-for="DataLimite" type="date" class="form-control">
+        <span asp-validation-for="DataLimite" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+</div>
+
+@section Scripts
+{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,14 @@
+﻿@model ListaDeTarefas2.Models.Tarefa;
+
+<div class="container" style="margin-top:6rem;">
+    <h1>@ViewData["Title"]</h1>
+
+    <p>Deseja mesmo excluir a tarefa: <strong>@Model.Titulo</strong>?</p>
+
+    <form asp-controller="Tarefas" asp-action="Delete" asp-route-id="@Model.Id" method="post" style="display:inline;">
+        <input type="hidden" name="Id" value="@Model.Id" />
+        <button type="submit" class="btn btn-danger">Apagar</button>
+    </form>
+
+    <a asp-action="Index" class="btn btn-secondary me-2">Cancelar</a>
+</div>
